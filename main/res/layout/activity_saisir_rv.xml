@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SaisirRvActivity">
+    <Button
+        android:id="@+id/retour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/retour"
+        tools:ignore="MissingConstraints"
+        android:onClick="retour"/>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/retour"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="5dp"
+        android:paddingBottom="50dp">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:id="@+id/DateSaisie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date de la visite : "
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/dateSelectionner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="jj/mm/aaaa"
+                app:layout_constraintTop_toBottomOf="@+id/DateSaisie"
+                tools:ignore="MissingConstraints" />
+            <Button
+                android:id="@+id/ModifDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ModifDate"
+                app:layout_constraintTop_toBottomOf="@+id/dateSelectionner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints"
+                android:onClick="selectionnerDateCommande"/>
+            <TextView
+                android:id="@+id/PraticienTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PraticienTV"
+                app:layout_constraintTop_toBottomOf="@+id/ModifDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <Spinner
+                android:id="@+id/Praticien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Praticien"
+                app:layout_constraintTop_toBottomOf="@+id/PraticienTV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/MotivTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/MotifTV"
+                app:layout_constraintTop_toBottomOf="@+id/Praticien"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints" />
+            <Spinner
+                android:id="@+id/Motif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Motif"
+                app:layout_constraintTop_toBottomOf="@+id/MotivTV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/BilanTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/BilanTV"
+                app:layout_constraintTop_toBottomOf="@+id/Motif"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints" />
+            <EditText
+                android:id="@+id/Bilan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text|textMultiLine"
+                android:text="@string/Bilan"
+                app:layout_constraintTop_toBottomOf="@+id/BilanTV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/CoeffConfianceTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/CoeffConfianceTV"
+                app:layout_constraintTop_toBottomOf="@+id/Bilan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints" />
+            <Spinner
+                android:id="@+id/CoeffConfiance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/CoeffConfiance"
+                app:layout_constraintTop_toBottomOf="@+id/CoeffConfianceTV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/CoeffConfiance"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints">
+                <Button
+                    android:id="@+id/btnValider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/valider"
+                    app:layout_constraintTop_toBottomOf="@+id/CoeffConfiance"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:onClick="valider" />
+
+                <Button
+                    android:id="@+id/btnAnnuler"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/annuler"
+                    app:layout_constraintTop_toBottomOf="@+id/btnValider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="MissingConstraints"
+                    android:onClick="annuler" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

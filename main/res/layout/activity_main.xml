@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:id="@+id/erreur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/Matricule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/matricule"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+        <EditText
+            android:id="@+id/MatriculeSaisie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/Mdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mdp"
+            app:layout_constraintTop_toBottomOf="@+id/Matricule"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+        <EditText
+            android:id="@+id/MdpSaisie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:password="true"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+            <Button
+                android:id="@+id/btnValider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/valider"
+                app:layout_constraintTop_toBottomOf="@+id/Mdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:onClick="valider" />
+
+            <Button
+                android:id="@+id/btnAnnuler"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/annuler"
+                app:layout_constraintTop_toBottomOf="@+id/btnValider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints"
+                android:onClick="annuler" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

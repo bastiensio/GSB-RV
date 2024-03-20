@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuRvActivity">
+    <TextView
+        android:id="@+id/nomPrenom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"/>
+
+    <Button
+        android:id="@+id/consulterRDV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/saisirRDV"
+        app:layout_constraintTop_toBottomOf="@+id/nomPrenom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints"
+        android:onClick="consulter"/>
+
+    <Button
+        android:id="@+id/saisirRDV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/consulterRDV"
+        app:layout_constraintTop_toBottomOf="@+id/consulterRDV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints"
+        android:onClick="saisir"/>
+
+    <Button
+        android:id="@+id/deconnection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/deconnection"
+        app:layout_constraintTop_toBottomOf="@+id/saisirRDV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints"
+        android:onClick="deconnection"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
